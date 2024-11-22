@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.chatapp.ChatAppController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <!-- Text area to display chat messages -->
+    <TextArea fx:id="messageDisplay" editable="false" prefHeight="200.0" prefWidth="300.0" wrapText="true"/>
+
+    <!-- Text field for typing a message -->
+    <TextField fx:id="messageInput" promptText="Type your message here" prefWidth="300.0"/>
+
+    <!-- Dropdown for selecting the recipient -->
+    <ComboBox fx:id="recipientSelector" prefWidth="300.0"/>
+
+    <!-- Button to send the message -->
+    <Button fx:id="sendButton" text="Send" onAction="#sendMessage"/>
+</VBox>
